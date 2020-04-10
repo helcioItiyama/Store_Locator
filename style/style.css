@@ -13,11 +13,11 @@ body {
 .title {
     position: absolute;
     z-index: 100;
-    font-size: 88px;
-    font-weight: bold;
+    font-size: 45px;
+    font-weight: 900;
     color: #333;
     text-transform: uppercase;
-    top: 100px;
+    top: 140px;
     left: 100px;
 }
 
@@ -56,6 +56,7 @@ body {
 .search i {
     font-size: 25px;
     color: white;
+    cursor: pointer;
 }
 
 .stores-list-container {
@@ -67,4 +68,95 @@ body {
     left: 100px;
     top: 320px;
     bottom: 20px;
+    display: flex;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.store-container {
+    border-bottom: 1px solid #979797;
+    display: flex;
+    cursor: pointer;
+}
+
+.store-address {
+    font-size: 21px;
+    color: #514c4c;
+    margin-top: 30px;
+}
+
+.store-address span {
+    display: block;
+}
+
+.store-phone-number {
+    color: #b5adad;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.store-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
+    background-color: #454e53;
+    color: #b5adad;
+}
+
+.store-info-container {
+    flex-grow: 1;
+}
+
+.store-number-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stores-list {
+    flex-grow: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-y: scroll;
+}
+
+.store-info-window {
+    min-width: 330px;
+    font-size: 18px;
+    padding: 8px;
+}
+
+.store-info-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, .87);
+}
+
+.store-info-status {
+    margin-top: 6px;
+    border-bottom: 1px solid #00000029;
+    padding-bottom: 6px;
+}
+
+.store-info-address, .store-info-phone {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.store-info-address .circle, .store-info-phone .circle {
+    width: 30px;
+    height: 30px;
+    background-color:#1985A1;
+    color: white;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-right: 8px;
 }
