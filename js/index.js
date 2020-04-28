@@ -31,9 +31,18 @@ function initMap() {
     } else {
       foundStores = stores;
     }
+    clearLocations();
     displayStores(foundStores);
     showStoresMarkers(foundStores);
     setOnClickListener();
+  }
+
+  function clearLocations() {
+    infoWindow.close();
+    for (var i = 0; i < markers.length; i++) {
+      markers[i].setMap(null);
+    }
+    markers.length = 0;
   }
 
   function setOnClickListener() {
@@ -53,16 +62,18 @@ function initMap() {
 
       storesHtml += `
         <div class="store-container">
-          <div class="store-info-container">
-              <div class="store-address">
-                  <span>${address[0]}</span>
-                  <span>${address[1]}</span>                    
-              </div>
-              <div class="store-phone-number">${phone}</div>
-          </div>
+          <div class="store-container-background">
+            <div class="store-info-container">
+                <div class="store-address">
+                    <span>${address[0]}</span>
+                    <span>${address[1]}</span>                    
+                </div>
+                <div class="store-phone-number">${phone}</div>
+            </div>
 
-          <div class="store-number-container">
-              <div class="store-number">${index +1}</div>
+            <div class="store-number-container">
+                <div class="store-number">${index +1}</div>
+            </div>
           </div>
         </div>
       `
